@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="contact" action="/mail" method="post">
+                <h3>Order Form</h3>
+                <h4>Pls fill the form</h4>
+                <fieldset>
+                    <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input name="sname" placeholder="Your second name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input name="phone" placeholder="+38 055 555 55 55" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <textarea name="text" placeholder="Type your message here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

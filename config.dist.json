@@ -1,0 +1,7 @@
+{
+    "designerEmail": "<designer's email>",
+    "serverAuth": {
+        "user": "<username>",
+        "pass": "<password>"
+    }
+}
