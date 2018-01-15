@@ -56,7 +56,7 @@ function _mailForDesigner(data) {
 
     const options = {
         from: `NG Cards <${config.designerEmail}>`,
-        to: data.email,
+        to: config.designerEmail,
         subject: 'NG Cards: A new greeting card ordered',
         html: html,
         attachments: [
