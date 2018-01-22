@@ -27,17 +27,17 @@ router.post('/', (req, res) => {
     transporter.sendMail(_mailForDesigner(data), (error) => {
         if (error) {
             console.log(error.message);
-            return res.send('Error!');
+            return res.status(500).send('Error!');
         }
     });
 
     transporter.sendMail(_mailForClient(data), (error) => {
         if (error) {
             console.log(error.message);
-            return res.send('Error!');
+            return res.status(500).send('Error!');
         }
 
-        res.redirect('/success');
+        res.redirect('/ordered');
     });
 });
 
