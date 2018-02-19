@@ -24,19 +24,21 @@ function dataValidator(route) {
         if (req.path.startsWith(route)) {
             let data = req.body;
             const fields = [
-                'name',
-                'sname',
-                'email',
-                'phone',
-                'text'
+                'client-name',
+                'client-email',
+                'receiver-name',
+                'receiver-email',
+                'subject',
+                'description'
             ];
             if (data.hasOwnProperty('submit')) {
                 delete data.submit;
             };
 
             if (_eq(Object.keys(data), fields) && (Object.values(data).indexOf('') === -1)) {
+                const emails = [data['client-email'], data['receiver-email']];
 
-                if (!_validateEmail(data.email) || !_validatePhone(data.phone)) {
+                if (!emails.every(_validateEmail)) {
                     return res.status(400).json({
                         error: 'Invalid email or phone'
                     });

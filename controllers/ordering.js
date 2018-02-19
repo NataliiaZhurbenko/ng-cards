@@ -43,11 +43,12 @@ router.post('/', (req, res) => {
 
 function _mailForDesigner(data) {
     const params = {
-        name: data.name,
-        sname: data.sname,
-        email: data.email,
-        phone: data.phone,
-        text: data.text
+        'client-name': data['client-name'],
+        'client-email': data['client-email'],
+        'receiver-name': data['receiver-name'],
+        'receiver-email': data['receiver-email'],
+        'subject': data['subject'],
+        'description': data['description']
     };
     const html = ejs.render(
         fs.readFileSync(path.join(__dirname, '../view/mail-for-designer.ejs')).toString(),

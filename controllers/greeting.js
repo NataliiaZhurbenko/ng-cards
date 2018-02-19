@@ -13,6 +13,8 @@ const config = require('../config');
  * POST mail data
  */
 router.post('/', (req, res) => {
+    _trySendMail(req, res, true, true);
+    /*
     if (!req.files) {
         return res.status(400).send('No files were uploaded');
     }
@@ -37,6 +39,7 @@ router.post('/', (req, res) => {
         isImageUploaded = true;
         _trySendMail(req, res, isMailUploaded, isImageUploaded);
     });
+    */
 });
 
 function _trySendMail(req, res, isMailUploaded, isImageUploaded) {
@@ -73,7 +76,7 @@ function _trySendMail(req, res, isMailUploaded, isImageUploaded) {
 function _mailForClient(data) {
     const params = {};
     const html = ejs.render(
-        fs.readFileSync(path.join(__dirname, '../cards/mail.ejs')).toString(),
+        fs.readFileSync(path.join(__dirname, '../cards/love-story/mail.ejs')).toString(),
         params
     );
 
@@ -84,9 +87,64 @@ function _mailForClient(data) {
         html: html,
         attachments: [
             {
-                filename: 'image.jpg',
-                path: './cards/image.jpg',
-                cid: 'mail@image.jpg'
+                filename: '1.jpg',
+                path: './cards/love-story/images/1.jpg',
+                cid: 'mail@1.jpg'
+            },
+            {
+                filename: '2.jpg',
+                path: './cards/love-story/images/2.jpg',
+                cid: 'mail@2.jpg'
+            },
+            {
+                filename: '3.jpg',
+                path: './cards/love-story/images/3.jpg',
+                cid: 'mail@3.jpg'
+            },
+            {
+                filename: '4.jpg',
+                path: './cards/love-story/images/4.jpg',
+                cid: 'mail@4.jpg'
+            },
+            {
+                filename: '5.jpg',
+                path: './cards/love-story/images/5.jpg',
+                cid: 'mail@5.jpg'
+            },
+            {
+                filename: '6.jpg',
+                path: './cards/love-story/images/6.jpg',
+                cid: 'mail@6.jpg'
+            },
+            {
+                filename: '7.jpg',
+                path: './cards/love-story/images/7.jpg',
+                cid: 'mail@7.jpg'
+            },
+            {
+                filename: '8.jpg',
+                path: './cards/love-story/images/8.jpg',
+                cid: 'mail@8.jpg'
+            },
+            {
+                filename: '9.jpg',
+                path: './cards/love-story/images/9.jpg',
+                cid: 'mail@9.jpg'
+            },
+            {
+                filename: '10.jpg',
+                path: './cards/love-story/images/10.jpg',
+                cid: 'mail@10.jpg'
+            },
+            {
+                filename: '11.jpg',
+                path: './cards/love-story/images/11.jpg',
+                cid: 'mail@11.jpg'
+            },
+            {
+                filename: '12.jpg',
+                path: './cards/love-story/images/12.jpg',
+                cid: 'mail@12.jpg'
             }
         ]
     };
@@ -97,20 +155,75 @@ function _mailForClient(data) {
 function _mailForReceiver(data) {
     const params = {};
     const html = ejs.render(
-        fs.readFileSync(path.join(__dirname, '../cards/mail.ejs')).toString(),
+        fs.readFileSync(path.join(__dirname, '../cards/love-story/mail.ejs')).toString(),
         params
     );
 
     const options = {
         from: data.clientEmail,
-        to: receiverEmail,
+        to: data.receiverEmail,
         subject: 'Greetings!',
         html: html,
         attachments: [
             {
-                filename: 'image.jpg',
-                path: './cards/image.jpg',
-                cid: 'mail@image.jpg'
+                filename: '1.jpg',
+                path: './cards/love-story/images/1.jpg',
+                cid: 'mail@1.jpg'
+            },
+            {
+                filename: '2.jpg',
+                path: './cards/love-story/images/2.jpg',
+                cid: 'mail@2.jpg'
+            },
+            {
+                filename: '3.jpg',
+                path: './cards/love-story/images/3.jpg',
+                cid: 'mail@w3.jpg'
+            },
+            {
+                filename: '4.jpg',
+                path: './cards/love-story/images/4.jpg',
+                cid: 'mail@4.jpg'
+            },
+            {
+                filename: '5.jpg',
+                path: './cards/love-story/images/5.jpg',
+                cid: 'mail@5.jpg'
+            },
+            {
+                filename: '6.jpg',
+                path: './cards/love-story/images/6.jpg',
+                cid: 'mail@6.jpg'
+            },
+            {
+                filename: '7.jpg',
+                path: './cards/love-story/images/7.jpg',
+                cid: 'mail@7.jpg'
+            },
+            {
+                filename: '8.jpg',
+                path: './cards/love-story/images/8.jpg',
+                cid: 'mail@8.jpg'
+            },
+            {
+                filename: '9.jpg',
+                path: './cards/love-story/images/9.jpg',
+                cid: 'mail@9.jpg'
+            },
+            {
+                filename: '10.jpg',
+                path: './cards/love-story/images/10.jpg',
+                cid: 'mail@10.jpg'
+            },
+            {
+                filename: '11.jpg',
+                path: './cards/love-story/images/11.jpg',
+                cid: 'mail@11.jpg'
+            },
+            {
+                filename: '12.jpg',
+                path: './cards/love-story/images/12.jpg',
+                cid: 'mail@12.jpg'
             }
         ]
     };
