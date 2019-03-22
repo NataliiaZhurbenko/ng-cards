@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
         _trySendMail(req, res, isMailUploaded, isImageUploaded);
     });
 
-    req.files.cardMail.mv(path.join(__dirname, '../cards/image.jpg'), (err) => {
+    req.files.cardImages.mv(path.join(__dirname, '../cards/image.jpg'), (err) => {
         if (err) {
             return res.status(500).send(err);
         }
