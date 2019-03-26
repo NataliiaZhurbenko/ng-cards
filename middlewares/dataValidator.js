@@ -40,7 +40,7 @@ function dataValidator(route) {
 
                 if (!emails.every(_validateEmail)) {
                     return res.status(400).json({
-                        error: 'Invalid email or phone'
+                        error: `Invalid email: ${data['client-email']} or ${data['receiver-email']}`
                     });
                 }
             }

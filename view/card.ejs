@@ -7,23 +7,45 @@
     </head>
     <body>
         <div class="container">
-            <form id="contact" action="/greeting" method="post" encType="multipart/form-data">
+            <form id="contact"
+                  action="/greeting"
+                  method="post"
+                  encType="multipart/form-data">
                 <h3>Sending Form</h3>
                 <h4>Pls fill the form</h4>
                 <fieldset>
-                    <input name="clientEmail" placeholder="Client Email Address" type="email" tabindex="1" required>
+                    <input name="clientEmail"
+                           placeholder="Client Email Address"
+                           type="email"
+                           tabindex="1"
+                           required>
                 </fieldset>
                 <fieldset>
-                    <input name="receiverEmail" placeholder="Receiver Email Address" type="email" tabindex="2" required>
+                    <input name="receiverEmail"
+                           placeholder="Receiver Email Address"
+                           type="email"
+                           tabindex="2"
+                           required>
                 </fieldset>
                 <fieldset>
-                    <input name="cardMail" placeholder="Greeting Card Mail" type="file" tabindex="3" required>
+                    <input name="cardMail"
+                           placeholder="Greeting Card Mail"
+                           type="file"
+                           tabindex="3"
+                           required>
                 </fieldset>
                 <fieldset>
-                    <input name="cardImage" placeholder="Greeting Card Image" type="file" tabindex="4" required>
+                    <input name="cardImages"
+                           placeholder="Greeting Card Images"
+                           type="file"
+                           tabindex="4"
+                           multiple>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="greeting-submit" data-submit="...Sending">Submit</button>
+                    <button name="submit"
+                            type="submit"
+                            id="greeting-submit"
+                            data-submit="...Sending">Submit</button>
                 </fieldset>
             </form>
         </div>
