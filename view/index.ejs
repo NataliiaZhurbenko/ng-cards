@@ -1,241 +1,160 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title><%= title %></title>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-		<link rel="stylesheet" href="/style.css">
-	</head>
-	<body style="background: #c0dfd9">
-		<!-- Sidebar/menu -->
-		<nav class="w3-sidebar w3-bar-block w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;background: #9ad3de" id="mySidebar">
-			<a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
-			<a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a>
-			<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
-			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
-		</nav>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+	.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
 
-		<!-- Top menu on small screens -->
-		<header class="w3-container w3-top w3-xlarge w3-padding-16" style="background: #dbc3d0">
-			<span class="w3-left w3-padding" style="color:#5e0231;font-weight: 600; font-size: 36px;">Greeting Cards</span>
-			<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-		</header>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()"
+	   class="w3-bar-item w3-button">Close Menu</a>
+	<a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+	<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
 
-		<!-- Overlay effect when opening sidebar on small screens -->
-		<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Top menu -->
+<div class="w3-top">
+	<div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+		<div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+		<div class="w3-right w3-padding-16">Mail</div>
+		<div class="w3-center w3-padding-16">My Food</div>
+	</div>
+</div>
 
-		<!-- !PAGE CONTENT! -->
-		<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
-			<!-- Photo grid -->
-			<div class="w3-row w3-grayscale-min">
-				<div class="w3-quarter">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-				</div>
+	<!-- First Photo Grid-->
+	<div class="w3-row-padding w3-padding-16 w3-center" id="food">
+		<div class="w3-quarter">
+			<img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+			<h3>The Perfect Sandwich, A Real NYC Classic</h3>
+			<p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
+			<h3>Let Me Tell You About This Steak</h3>
+			<p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
+			<h3>Cherries, interrupted</h3>
+			<p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+			<p>What else?</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
+			<h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+			<p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+	</div>
 
-				<div class="w3-quarter">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
-				</div>
+	<!-- Second Photo Grid-->
+	<div class="w3-row-padding w3-padding-16 w3-center">
+		<div class="w3-quarter">
+			<img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+			<h3>All I Need Is a Popsicle</h3>
+			<p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+			<h3>Salmon For Your Skin</h3>
+			<p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+			<h3>The Perfect Sandwich, A Real Classic</h3>
+			<p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+		<div class="w3-quarter">
+			<img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+			<h3>Le French</h3>
+			<p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		</div>
+	</div>
 
-				<div class="w3-quarter">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-				</div>
+	<!-- Pagination -->
+	<div class="w3-center w3-padding-32">
+		<div class="w3-bar">
+			<a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+			<a href="#" class="w3-bar-item w3-black w3-button">1</a>
+			<a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+			<a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+			<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+			<a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+		</div>
+	</div>
 
-				<div class="w3-quarter">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
-					<img src="./images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
-				</div>
-			</div>
+	<hr id="about">
 
-			<!-- Pagination -->
-			<div class="w3-center w3-padding-32">
-				<div class="w3-bar">
-					<a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-					<a href="#" class="w3-bar-item w3-black w3-button">1</a>
-					<a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-					<a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-					<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-					<a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-				</div>
-			</div>
+	<!-- About Section -->
+	<div class="w3-container w3-padding-32 w3-center">
+		<h3>About Me, The Food Man</h3><br>
+		<img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+		<div class="w3-padding-32">
+			<h4><b>I am Who I Am!</b></h4>
+			<h6><i>With Passion For Real, Good Food</i></h6>
+			<p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+		</div>
+	</div>
+	<hr>
 
-			<!-- Modal for full size images on click-->
-			<div id="modal01" class="w3-modal" style="padding-top:0;background: #5e0231;" onclick="this.style.display='none'">
-				<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-				<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-					<img id="img01" class="w3-image">
-					<p id="caption"></p>
-				</div>
-			</div>
-
-			<!-- About section -->
-			<div class="w3-container  w3-center w3-text-light-grey w3-padding-32" style="background: #b0aac2;" id="about">
-				<h4><b>About Me</b></h4>
-				<img src="/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
-				<div class="w3-content w3-justify" style="max-width:600px">
-					<h4>My Name is Natalie Gervais</h4>
-					<p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					</p>
-					<p>mail: natalie.gervais@gmail.com</p>
-					<p>tel: 5353 35531</p>
-					<hr class="w3-opacity">
-					<h4 class="w3-padding-16">Technical Skills</h4>
-					<p class="w3-wide">Java Script</p>
-					<div class="w3-white">
-						<div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
-					</div>
-					<p class="w3-wide">HTML</p>
-					<div class="w3-white">
-						<div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
-					</div>
-					<p class="w3-wide">CSS</p>
-					<div class="w3-white">
-						<div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
-					</div>
-					<p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">Download Resume</button></p>
-					<hr class="w3-opacity">
-
-					<h4 class="w3-padding-16">How much I charge</h4>
-					<div class="w3-row-padding" style="margin:0 -16px; font-family: who-we-are">
-						<div class="w3-half w3-margin-bottom">
-							<ul class="w3-ul w3-white w3-center">
-								<li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-								<li class="w3-padding-16">Web Design</li>
-								<li class="w3-padding-16">Till 5 photos</li>
-								<li class="w3-padding-16">
-									<h2>$ 10</h2>
-									<span class="w3-opacity">per card</span>
-								</li>
-								<li class="w3-light-grey w3-padding-24">
-									<button class="w3-button w3-white w3-padding-large">Order</button>
-								</li>
-							</ul>
-						</div>
-
-						<div class="w3-half">
-							<ul class="w3-ul w3-white w3-center">
-								<li class="w3-black w3-xlarge w3-padding-32">Pro</li>
-								<li class="w3-padding-16">Creative Design</li>
-								<li class="w3-padding-16">till 10 photos</li>
-								<li class="w3-padding-16">
-									<h2>$ 25</h2>
-									<span class="w3-opacity">per card</span>
-								</li>
-								<li class="w3-light-grey w3-padding-24">
-									<button class="w3-button w3-white w3-padding-large">Order</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Contact section -->
-			<div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
-				<div class="w3-content" style="max-width:600px">
-					<h4 class="w3-center"><b>Order form </b></h4>
-					<p>Do you want me to send someone creative greeting card? Fill out the form and fill me in with the details :) I love meeting new people!</p>
-					<form action="/action_page.php" target="_blank">
-						<div class="w3-section">
-							<label>Your Name/Твоє ім'я</label>
-							<input class="w3-input w3-border" type="text" name="client-name" required>
-						</div>
-						<div class="w3-section">
-							<label>Your Email/Твій email</label>
-							<input class="w3-input w3-border" type="text" name="client-email" required>
-						</div>
-						<div class="w3-section">
-							<label>Receiver Name/Ім'я отримувача</label>
-							<input class="w3-input w3-border" type="text" name="receiver-name" required>
-						</div>
-						<div class="w3-section">
-							<label>Receiver Email/Email отримувача</label>
-							<input class="w3-input w3-border" type="text" name="receiver-email" required>
-						</div>
-
-						<div class="w3-section w3-center">
-							<label>Subject for greeting card/Тема листівки</label>
-							<input class="w3-input w3-border" type="text" name="subject" required>
-						</div>
-
-						<div class="w3-section">
-							<textarea class="w3-textarea w3-border" type="text" name="description" required>Please discraabe your email here/Опишіть якою має бути листівка тут</textarea>
-						</div>
-						<button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
-					</form>
-				</div>
-			</div>
-
-			<!-- Footer -->
-			<footer class="w3-container w3-padding-32 w3-grey">
-				<div class="w3-row-padding">
-					<div class="w3-third">
-						<h3>INFO</h3>
-						<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-					</div>
-
-					<div class="w3-third">
-						<h3>BLOG POSTS</h3>
-						<ul class="w3-ul">
-							<li class="w3-padding-16 w3-hover-black">
-								<img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-								<span class="w3-large">Lorem</span><br>
-								<span>Sed mattis nunc</span>
-							</li>
-							<li class="w3-padding-16 w3-hover-black">
-								<img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-								<span class="w3-large">Ipsum</span><br>
-								<span>Praes tinci sed</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="w3-third">
-						<h3>POPULAR TAGS</h3>
-						<p>
-							<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-							<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-							<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-							<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-							<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-						</p>
-					</div>
-				</div>
-			</footer>
-
-			<div class="w3-center w3-padding-24 w3-hover-opacity royal-black ">Powered by Natalie Gervais</div>
-
-			<!-- End page content -->
+	<!-- Footer -->
+	<footer class="w3-row-padding w3-padding-32">
+		<div class="w3-third">
+			<h3>FOOTER</h3>
+			<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+			<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 		</div>
 
-		<script>
-			// Script to open and close sidebar
-			function w3_open() {
-				document.getElementById("mySidebar").style.display = "block";
-				document.getElementById("myOverlay").style.display = "block";
-			}
+		<div class="w3-third">
+			<h3>BLOG POSTS</h3>
+			<ul class="w3-ul w3-hoverable">
+				<li class="w3-padding-16">
+					<img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+					<span class="w3-large">Lorem</span><br>
+					<span>Sed mattis nunc</span>
+				</li>
+				<li class="w3-padding-16">
+					<img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+					<span class="w3-large">Ipsum</span><br>
+					<span>Praes tinci sed</span>
+				</li>
+			</ul>
+		</div>
 
-			function w3_close() {
-				document.getElementById("mySidebar").style.display = "none";
-				document.getElementById("myOverlay").style.display = "none";
-			}
+		<div class="w3-third w3-serif">
+			<h3>POPULAR TAGS</h3>
+			<p>
+				<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+				<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+				<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+				<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+				<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+			</p>
+		</div>
+	</footer>
 
-			// Modal Image Gallery
-			function onClick(element) {
-				document.getElementById("img01").src = element.src;
-				document.getElementById("modal01").style.display = "block";
-				var captionText = document.getElementById("caption");
-				captionText.innerHTML = element.alt;
-			}
-		</script>
-	</body>
+	<!-- End page content -->
+</div>
+
+<script>
+	// Script to open and close sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").style.display = "block";
+	}
+
+	function w3_close() {
+		document.getElementById("mySidebar").style.display = "none";
+	}
+</script>
+
+</body>
 </html>

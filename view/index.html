@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>NG Cards</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body {
+        font-size:16px;
+    }
+
+    .w3-col img{
+        margin-bottom:-6px;
+        margin-top:16px;
+        opacity:0.8;
+        cursor:pointer;
+    }
+
+    .w3-col img:hover{
+        opacity:1
+    }
+    .strawberry-red {
+        background-color: #cb0000!important;
+        color: #fff !important;
+    }
+    .chocolate {
+        color: #50312f;
+    }
+
+    .basil-green {
+       background-color: #3f6c45;
+    }
+
+    .header-line {
+        border: 5px solid #cb0000;
+    }
+
+    .strawberry-red-text {
+        color: #cb0000;
+    }
+
+    .coral {
+        background-color: #ec96a4;
+    }
+
+    .branch {
+        background-color: #5d535e;
+    }
+
+    .branch-text {
+        color: #5d535e;
+    }
+
+    .white {
+        color: #fff;
+    }
+
+    .lemon-lime-text {
+        color: #e4ea8c;
+
+    }
+
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar strawberry-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <h3 class="w3-padding-64 w3-wide"><b>NG CARDS</b></h3>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">О нас</a>
+        <a href="#cards" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Открытки</a>
+        <a href="#prices" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Цены</a>
+        <a href="#order" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Сделать заказ</a>
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top strawberry-red w3-hide-large w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="strawberry-red w3-button w3-margin-right" onclick="w3_open()">☰</a>
+    <span>NG CARDS</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:75px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="cards">
+        <h1 class="w3-xxxlarge branch-text"><b>Симпатичные открытки и поздравительные открытки онлайн</b></h1>
+        <hr style="width:50px;" class="w3-round  header-line">
+        <h5 class="chocolate">Хотите что-нибудь милое и восхитительное? Вот целый ряд открыток, которые сделают любой день немного лучше.  Запланируйте персональное цифровое приветствие сегодня кому-то особенному!</h5>
+
+    </div>
+
+    <!-- Cards-->
+    <div class="w3-row-padding w3-grayscale" style="margin-top:75px">
+        <div class="w3-col m4 w3-margin-bottom">
+            <div class="w3-light-grey">
+                <img src="../static/image1.jpg" alt="love story" style="width:100%" onclick="onClick(this)">
+                <div class="w3-container">
+                    <h3 class="chocolate">Love story</h3>
+                    <p class="w3-opacity">Самое искренне и чистое признание в любви подарить своей половинке. Ведь нет ничего прекраснее, чем слышать слова любви</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+            <div class="w3-light-grey">
+                <img src="../static/image1.jpg" alt="love story" style="width:100%" onclick="onClick(this)">
+                <div class="w3-container">
+                    <h3>Love story</h3>
+                        <p class="w3-opacity">CEO & Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+            <div class="w3-light-grey">
+                <img src="../static/image1.jpg" alt="love story" style="width:100%" onclick="onClick(this)">
+                <div class="w3-container">
+                    <h3>Love story</h3>
+                        <p class="w3-opacity">CEO & Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal coral" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button branch w3-xxlarge w3-display-topright white">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="prices" style="margin-top:75px">
+        <h1 class="w3-xxxlarge branch-text"><b>Цены</b></h1>
+        <hr style="width:50px;" class="w3-round header-line">
+        <p>Будьте первым, кто отправит веселое онлайн-приветствие своим друзьям. Создать, запланировать и отправить сегодня!</p>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-grey w3-center">
+                <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                <li class="w3-padding-16">до 5 фото</li>
+                <li class="w3-padding-16">3 блока текста</li>
+                <li class="w3-padding-16">ручная работа</li>
+                <li class="w3-padding-16">
+                    <h2>$ 10</h2>
+                    <span class="w3-opacity">за открытку</span>
+                </li>
+                <li class="w3-light-grey w3-padding-24">
+                    <button  class="w3-button basil-green w3-padding-large white">Заказать</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w3-half">
+            <ul class="w3-ul w3-light-grey w3-center">
+                <li class="strawberry-red w3-xlarge w3-padding-32">Pro</li>
+                <li class="w3-padding-16">5-10 фото</li>
+                <li class="w3-padding-16">5 блоков текста</li>
+                <li class="w3-padding-16">индивидуальный подход</li>
+                <li class="w3-padding-16">
+                    <h2>$ 15</h2>
+                    <span class="w3-opacity">за открытку</span>
+                </li>
+                <li class="w3-light-grey w3-padding-24">
+                    <button  class="w3-button basil-green w3-padding-large white">Заказать</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="w3-container" id="order" style="margin-top:75px">
+        <h1 class="w3-xxxlarge branch-text"><b>Заказать открытку</b></h1>
+        <hr style="width:50px;" class="w3-round header-line">
+        <p>Вы хотите, чтобы мы стилизировали Вашу открытку? Заполните форму деталями :) Мы любим встречать новых людей!</p>
+        <form action="/action_page.php" target="_blank">
+            <div class="w3-section">
+                <label>Ваше имя</label>
+                <input class="w3-input w3-border" type="text" name="Name" required>
+            </div>
+            <div class="w3-section">
+                <label>Ваш email</label>
+                <input class="w3-input w3-border" type="text" name="Email" required>
+            </div>
+            <div class="w3-section">
+                <label>Имя получателя</label>
+                <input class="w3-input w3-border" type="text" name="Name" required placeholder="Имя получателя открытки">
+            </div>
+            <div class="w3-section">
+                <label>Email получателя</label>
+                <input class="w3-input w3-border" type="text" name="Email" required placeholder="Email получателя открытки">
+            </div>
+            <div class="w3-section">
+                <label>Описание</label>
+                <input class="w3-input w3-border" type="text" name="Message" required placeholder="Ваши пожелания, как должна выглядеть открытка">
+            </div>
+            <button type="submit" class="w3-button w3-block w3-padding-large strawberry-red w3-margin-bottom">Отправить</button>
+        </form>
+    </div>
+
+    <!-- End page content -->
+
+    <footer class="w3-container w3-padding-16 w3-light-grey w3-center">
+        <a href="#" class="w3-button basil-green white w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section branch-text">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p class="w3-right w3-hover-opacity">Powered by Natalie Gervais</p>
+    </footer>
+</div>
+
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+</script>
+
+</body>
+</html>
